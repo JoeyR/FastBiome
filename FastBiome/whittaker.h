@@ -89,11 +89,11 @@ constexpr int AdjustTemperatureToPosition(int temp) {
 
 constexpr int AdjustPrecipitationToPosition(int prec) {
   if (prec > max_precipitation_m || prec < min_precipitation_m) {
-    // temperature is out of bounds
+    // precipitation is out of bounds
     return -1;
   }
 
-  // temperature is in bounds
+  // precipitation is in bounds
   return prec;
 }
 
