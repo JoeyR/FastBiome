@@ -7,10 +7,10 @@
 
 int main() {
   // precipitation -> (0,45)
-  int precipitation_m(20);
+  int precipitation_m(0);
 
   // temperature -> (-15,30)
-  int temperature_c(15);
+  int temperature_c(0);
 
   auto biome = FastBiome::GetWhittakerBiome(precipitation_m, temperature_c);
 
