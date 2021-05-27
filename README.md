@@ -38,7 +38,7 @@ int main() {
 
   if (biome) {
     // returned value is associated with the FastBiome::whittaker::biome_name enumeration.
-    std::cout << "Found Biome: " << std::to_string(*biome) << std::endl;
+    std::cout << "Found Biome: " << *biome << std::endl;
   } else {
     std::cout << "Could not find biome for input: " << std::endl;
     std::cout << " Precipitation: " << precipitation_m << std::endl;

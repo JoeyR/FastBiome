@@ -15,7 +15,7 @@ int main() {
   auto biome = FastBiome::GetWhittakerBiome(precipitation_m, temperature_c);
 
   if (biome) {
-    std::cout << "Found Biome: " << std::to_string(*biome) << std::endl;
+    std::cout << "Found Biome: " << *biome << std::endl;
   } else {
     std::cout << "Could not find biome for input: " << std::endl;
     std::cout << " Precipitation: " << precipitation_m << std::endl;
