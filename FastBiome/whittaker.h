@@ -74,8 +74,8 @@ enum class biome_name {
 constexpr int max_temperature_c{30};
 constexpr int min_temperature_c{-15};
 
-constexpr int max_precipitation_m{45};
-constexpr int min_precipitation_m{0};
+constexpr int max_precipitation_dm{45};
+constexpr int min_precipitation_dm{0};
 
 constexpr int AdjustTemperatureToPosition(int temp) {
   if (temp <= max_temperature_c || temp >= min_temperature_c) {
@@ -88,7 +88,7 @@ constexpr int AdjustTemperatureToPosition(int temp) {
 }
 
 constexpr int AdjustPrecipitationToPosition(int prec) {
-  if (prec > max_precipitation_m || prec < min_precipitation_m) {
+  if (prec > max_precipitation_dm || prec < min_precipitation_dm) {
     // precipitation is out of bounds
     return -1;
   }

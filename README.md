@@ -10,10 +10,10 @@ The Whittaker Biome Type is determined by:
 ## Parameters
 
 ```c++
-GetWhittakerBiome(int precipitation_m, int temperature_c);
+GetWhittakerBiome(int precipitation_dm, int temperature_c);
 ```
 
-Valid values for precipitation are in meters from 0 to 45, and temperature in celsius from -15 to 30.
+Valid values for precipitation are in decimeters from 0 to 45, and temperature in celsius from -15 to 30.
 
 The underlying data structure is a compile-time 2D array which is filled with integers that correspond to an enumerated biome.
 
@@ -29,12 +29,12 @@ If the value is 0, there is no biome associated with it, and it will return an e
 
 int main() {
   // precipitation -> (0,45)
-  int precipitation_m(20);
+  int precipitation_dm(20);
 
   // temperature -> (-15,30)
   int temperature_c(15);
 
-  auto biome = FastBiome::GetWhittakerBiome(precipitation_m, temperature_c);
+  auto biome = FastBiome::GetWhittakerBiome(precipitation_dm, temperature_c);
 
   if (biome) {
     // returned value is associated with the FastBiome::whittaker::biome_name enumeration.
